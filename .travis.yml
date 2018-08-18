@@ -1,0 +1,5 @@
+---
+language: generic
+script:
+  - docker build -t rust-sigill .
+  - docker run -it --rm -P -v "$PWD:/home/user/work" -e "MY_UID=$UID" rust-sigill
